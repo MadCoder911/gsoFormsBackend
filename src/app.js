@@ -14,7 +14,7 @@ app.use(
   })
 );
 app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "https://task-tracks.netlify.app");
+  res.header("Access-Control-Allow-Origin", "https://gsu-trip.vercel.app");
   res.header("Access-Control-Allow-Methods", "GET,HEAD,PUT,PATCH,POST,DELETE");
   res.header("Access-Control-Allow-Headers", "content-type");
   res.header("Access-Control-Allow-Credentials", "true");
