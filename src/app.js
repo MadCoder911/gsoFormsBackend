@@ -13,7 +13,7 @@ app.use(
       "http://localhost:3001",
       "https://gsu-trip.vercel.app",
     ],
-
+    methods: ["POST", "PUT", "GET", "OPTIONS", "HEAD"],
     credentials: true, //i
   })
 );
