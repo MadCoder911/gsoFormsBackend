@@ -9,9 +9,9 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://booking-mern.vercel.app/",
-      "https://booking-mern.vercel.app",
+
       "http://localhost:3001",
+      "https://gsu-trip.vercel.app",
     ],
 
     credentials: true, //i
