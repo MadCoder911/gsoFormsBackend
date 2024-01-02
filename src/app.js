@@ -7,12 +7,8 @@ const formsRouter = require("./routes/forms/forms.router");
 const app = express();
 app.use(
   cors({
-    origin: [
-      "http://localhost:5173",
+    origin: "https://gsu-trip.vercel.app",
 
-      "http://localhost:3001",
-      "https://gsu-trip.vercel.app",
-    ],
     methods: ["POST", "PUT", "GET", "OPTIONS", "HEAD"],
     credentials: true, //i
   })
