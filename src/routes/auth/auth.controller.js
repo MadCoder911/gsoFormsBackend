@@ -43,12 +43,12 @@ const login = async (req, res, next) => {
     //Respond to client
     const { password, ...otherDetails } = user._doc;
     //Set cookie
-    res
-      .cookie("access_token", token, {
-        httpOnly: true,
-        secure: false,
-      })
-      .json({ ...otherDetails });
+    // res
+    //   .cookie("access_token", token, {
+    //     httpOnly: true,
+    //     secure: false,
+    //   })
+    res.status(200).json({ ...otherDetails, token: token });
   } catch (err) {
     next(err);
   }
