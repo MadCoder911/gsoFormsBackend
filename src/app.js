@@ -7,16 +7,14 @@ const formsRouter = require("./routes/forms/forms.router");
 const app = express();
 app.use(
   cors({
-    origin: "https://gsu-trip.vercel.app",
+    origin: ["https://gsu-trip.vercel.app", "http://localhost:5173"],
 
     methods: ["POST", "PUT", "GET", "OPTIONS", "HEAD"],
+    origin: true,
     credentials: true, //i
   })
 );
 app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "https://gsu-trip.vercel.app");
-  res.header("Access-Control-Allow-Methods", "GET,HEAD,PUT,PATCH,POST,DELETE");
-  res.header("Access-Control-Allow-Headers", "content-type");
   res.header("Access-Control-Allow-Credentials", "true");
   next();
 });
