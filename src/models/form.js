@@ -34,6 +34,10 @@ const FormSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    payment_pic: {
+      type: String,
+      required: true,
+    },
     uni_id: {
       type: String,
       required: true,
