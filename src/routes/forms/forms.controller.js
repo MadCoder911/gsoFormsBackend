@@ -14,6 +14,7 @@ async function getAllForms(req, res, next) {
   }
 }
 async function createForms(req, res, next) {
+  console.log(req.data, "test");
   const newForm = new FormSchema(req.body);
 
   try {
@@ -27,6 +28,7 @@ async function createForms(req, res, next) {
       return;
     } else {
       const savedForm = await newForm.save();
+      console.log(savedForm);
       res
         .status(200)
         .setHeader("Content-Type", "application/json")
